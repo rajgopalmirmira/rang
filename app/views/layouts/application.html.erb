@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Rang</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  <%= render 'home/header'%>
+</head>
+<body>
+
+<%= yield %>
+<%if false%>
+<%= link_to 'Home',root_path,class: 'btn btn-primary' %>
+<%= link_to 'About Us',home_about_path, class: 'btn btn-success' %></p>
+<%end%>
+</body>
+</html>
