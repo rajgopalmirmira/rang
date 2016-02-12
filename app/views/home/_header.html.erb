@@ -17,7 +17,12 @@
       <ul class="nav navbar-nav">
         <li><%= link_to 'Home',root_path %></li>
         <li><%= link_to 'About Us',home_about_path %></li>
+        <li><%= link_to 'Photographers',photographers_path %></li>
+        <% if user_signed_in? %>
 
+        <li><%= link_to 'Add Photographer',new_photographer_path %></li>
+          <%else%>
+            <%end%>
         </ul>
       <form class="navbar-form navbar-left" role="search">
         <div class="form-group">
