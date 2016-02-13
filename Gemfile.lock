@@ -37,7 +37,7 @@ GEM
       thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
     arel (6.0.3)
-    autoprefixer-rails (6.3.2)
+    autoprefixer-rails (6.3.3)
       execjs
       json
     aws-sdk (2.2.16)
@@ -185,14 +185,14 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  aws-sdk (~> 2.2, >= 2.2.16)
+  aws-sdk
   bootstrap-sass (~> 3.3, >= 3.3.6)
   byebug
   coffee-rails (~> 4.1.0)
   devise (~> 3.5, >= 3.5.6)
   jbuilder (~> 2.0)
   jquery-rails
-  paperclip (~> 4.3, >= 4.3.5)
+  paperclip
   pg (= 0.17.1)
   rails (= 4.2.5.1)
   rails_12factor (= 0.0.2)
