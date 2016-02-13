@@ -1,6 +1,7 @@
 class PhotographersController < ApplicationController
   before_action :set_photographer, only: [:show, :edit, :update, :destroy]
-
+  before_action :authenticate_user!,except:[:index,:show]
+  before_action :correct_user, only: [:edit,:update,:destroy]
   # GET /photographers
   # GET /photographers.json
   def index
@@ -14,7 +15,7 @@ class PhotographersController < ApplicationController
 
   # GET /photographers/new
   def new
-    @photographer = Photographer.new
+    @photographer = current_user.photographers.build
   end
 
   # GET /photographers/1/edit
@@ -24,7 +25,7 @@ class PhotographersController < ApplicationController
   # POST /photographers
   # POST /photographers.json
   def create
-    @photographer = Photographer.new(photographer_params)
+    @photographer = current_user.photographers.build(photographer_params)
 
     respond_to do |format|
       if @photographer.save
@@ -70,5 +71,9 @@ class PhotographersController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def photographer_params
       params.require(:photographer).permit(:name, :fburl, :weburl, :about)
+    end
+    def correct_user
+      @photographer=current_user.photographers.find_by(id: params[:id])
+      redirect_to photographers_path, notice: "Not Authorized to edit this Photographer" if @photographer.nil?
     end
 end
