@@ -70,8 +70,9 @@ class PhotographersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def photographer_params
-      params.require(:photographer).permit(:name, :fburl, :weburl, :about)
+      params.require(:photographer).permit(:name, :fburl, :weburl, :about,:image)
     end
+    
     def correct_user
       @photographer=current_user.photographers.find_by(id: params[:id])
       redirect_to photographers_path, notice: "Not Authorized to edit this Photographer" if @photographer.nil?

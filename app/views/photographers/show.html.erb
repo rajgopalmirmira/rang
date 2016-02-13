@@ -1,5 +1,7 @@
 <p id="notice"><%= notice %></p>
 
+<%= image_tag @photographer.image.url(:medium) %>
+
 <p>
   <strong>Name:</strong>
   <%= @photographer.name %>
@@ -19,6 +21,7 @@
   <strong>About:</strong>
   <%= @photographer.about %>
 </p>
+
 
 <%= link_to 'Edit', edit_photographer_path(@photographer) %> |
 <%= link_to 'Back', photographers_path %>

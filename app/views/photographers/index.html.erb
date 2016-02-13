@@ -20,6 +20,7 @@
         <td><%= photographer.fburl %></td>
         <td><%= photographer.weburl %></td>
         <td><%= photographer.about %></td>
+        <td><%= image_tag photographer.image.url(:medium) %></td>
         <td><%= link_to 'Show', photographer %></td>
         <td><%= link_to 'Edit', edit_photographer_path(photographer) %></td>
         <td><%= link_to 'Destroy', photographer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
