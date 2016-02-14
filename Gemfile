@@ -14,6 +14,7 @@ gem 'coffee-rails', '~> 4.1.0'
 gem 'aws-sdk','< 2.0'
 gem 'masonry-rails'
 gem 'jquery-turbolinks'
+gem 'imagesLoaded_rails', '~> 3.1', '>= 3.1.8'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 

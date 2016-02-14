@@ -2,12 +2,17 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 #photographers {
-  margin: 0 auto;
+  background: #FFF;
+  padding: 5px;
+  border-radius: 5px;
+  clear: both;
+
 }
 
 .box {
   margin: 5px;
-  width: 214px;
+  width: 225px;
+
 }
 
 .box img {
