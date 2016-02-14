@@ -1,26 +1,27 @@
-<p id="notice"><%= notice %></p>
-
-<h1>Listing Photographers</h1>
-
 <div id="photographers" class="transitions-enabled">
+
     <% @photographers.each do |photographer| %>
 <div class="box">
   <div class="panel panel-default">
-        <strong><%= photographer.name %></strong><br \>
-        <%= image_tag photographer.image.url(:thumb) %><br \>
+
+        <%= link_to image_tag(photographer.image.url(:medium)), photographer %><br />
         <div class="panel-body">
-        <%= link_to 'Facebok', url_for(photographer.fburl) %><br \>
-        <%= link_to 'Website',  photographer.weburl %><br \>
+        <%= link_to 'Facebok', url_for(photographer.fburl) %>
+        <%= link_to 'Website',  photographer.weburl %><br />
 </div>
-<div class="panel-footer">
-        <%= link_to 'Show', photographer %>
+
+
         <%if photographer.user == current_user %>
+
+        <div class="panel-footer">
         <%= link_to 'Edit', edit_photographer_path(photographer) %>
         <%= link_to 'Destroy', photographer, method: :delete, data: { confirm: 'Are you sure?' } %>
+  </div>
         <% end %>
+
+    </div>
       </div>
     <% end %>
 
-</div>
-  </div>
+
     </div>
