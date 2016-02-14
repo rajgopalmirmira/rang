@@ -38,13 +38,6 @@ Rails.application.configure do
 
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
-  config.paperclip_defaults ={
-    :storage => :s3,
-      :s3_credentials => {
-      :bucket => 'phorum',
-      :access_key_id => 'AKIAIYGOLSBNSNKKV6VA',
-      :secret_access_key => '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'
-    }
-    }
+
   config.action_mailer.default_url_options = {host:'localhost',port:3000}
 end
