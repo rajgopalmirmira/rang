@@ -75,10 +75,11 @@ Rails.application.configure do
   config.log_formatter = ::Logger::Formatter.new
   config.paperclip_defaults ={
     :storage => :s3,
+    :s3_region => 'us-east-1',
       :s3_credentials => {
-      :bucket => 'phorum',
-      :access_key_id => 'AKIAIYGOLSBNSNKKV6VA',
-      :secret_access_key => '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'
+        :bucket => 'phorum',
+        :access_key_id => 'AKIAIYGOLSBNSNKKV6VA',
+        :secret_access_key => '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'
     }
     }
   # Do not dump schema after migrations.
