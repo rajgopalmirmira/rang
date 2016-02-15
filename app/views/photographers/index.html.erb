@@ -3,8 +3,8 @@
     <% @photographers.each do |photographer| %>
 <div class="box">
   <div class="panel panel-default">
-    <strong><%= photographer.name %></strong>
-        <%= link_to image_tag(photographer.image.url(:medium)), photographer %>
+    <strong><%= photographer.name %></strong><br />
+        <%= link_to image_tag(photographer.image.url(:medium)), photographer %><br />
         <div class="panel-body">
         <%= link_to 'Facebok', url_for(photographer.fburl) %>
         <%= link_to 'Website',  photographer.weburl %>
