@@ -1,5 +1,47 @@
-<div class="jumbotron">
-<h1>Welcome to Photoapp</h1>
-<p>Find me in app/views/home/index.html.erb <br \>
+<div id="maincarousel" class="carousel slide" data-ride = "carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#maincarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#maincarousel" data-slide-to="1"></li>
+    <li data-target="#maincarousel" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner" role="listbox">
+    <div class="item active">
+      <%= image_tag "https://s3.amazonaws.com/phorum/homepage/pittsburgh.jpg", class: "first-slide", alt: "First Slide" %>
+      <div class="container">
+        <div class="carousel-caption">
+          <h1>Pittsburg</h1>
+          <p>The Steel City, as seen from Mt.Washington.</p>
+          <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn More</a></p>
+        </div>
+      </div>
+    </div>
+    <div class="item">
+      <%= image_tag "https://s3.amazonaws.com/phorum/homepage/prague.jpg",class: "second-slide", alt: "Second Slide" %>
+      <div class="container">
+        <div class="carousel-caption">
+          <h1>Prague</h1>
+          <p>Sunrise at Charles Bridge over Vltava river</p>
+          <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
+        </div>
+      </div>
+    </div>
+    <div class="item">
+      <%= image_tag "https://s3.amazonaws.com/phorum/homepage/newyorkcity.jpg",class: "third-slide", alt: "Third Slide" %>
+      <div class="container">
+        <div class="carousel-caption">
+          <h1>New York City</h1>
+          <p>World capital as seen from the Hudson bay</p>
+          <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn More</a></p>
+        </div>
+      </div>
+    </div>
 </div>
-This would eventually be the home page for the applicaiton <br \>
+<a class="left carousel-control" href="#maincarousel" role="button" data-slide="prev">
+  <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+  <span class="sr-only">Previous</span>
+</a>
+<a class="right carousel-control" href="#maincarousel" role="button" data-slide="next">
+  <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+  <span class="sr-only">Next</span>
+</a>
+</div>
