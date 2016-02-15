@@ -1,13 +1,13 @@
-<div id="photographers" class="transitions-enabled">
+<div id="pins" class="transitions-enabled">
 
     <% @photographers.each do |photographer| %>
 <div class="box">
   <div class="panel panel-default">
-    <strong><%= photographer.name %></strong><br />
-        <%= link_to image_tag(photographer.image.url(:medium)), photographer %><br />
+    <strong><%= photographer.name %></strong>
+        <%= link_to image_tag(photographer.image.url(:medium)), photographer %>
         <div class="panel-body">
         <%= link_to 'Facebok', url_for(photographer.fburl) %>
-        <%= link_to 'Website',  photographer.weburl %><br />
+        <%= link_to 'Website',  photographer.weburl %>
 </div>
 
 
@@ -18,10 +18,7 @@
         <%= link_to 'Destroy', photographer, method: :delete, data: { confirm: 'Are you sure?' } %>
   </div>
         <% end %>
-
-    </div>
+  </div>
       </div>
     <% end %>
-
-
-    </div>
+</div>
