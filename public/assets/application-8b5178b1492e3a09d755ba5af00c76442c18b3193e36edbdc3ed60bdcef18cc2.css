@@ -6634,12 +6634,12 @@ a.badge:hover, a.badge:focus {
   padding-bottom: 30px;
   margin-bottom: 30px;
   color: inherit;
-  background-color: gray;
+  background-color: #eeeeee;
 }
 /* line 13, /home/rmirmira/.rvm/gems/ruby-2.3.0/gems/bootstrap-sass-3.3.6/assets/stylesheets/bootstrap/_jumbotron.scss */
 .jumbotron h1,
 .jumbotron .h1 {
-  color: gold;
+  color: inherit;
 }
 /* line 18, /home/rmirmira/.rvm/gems/ruby-2.3.0/gems/bootstrap-sass-3.3.6/assets/stylesheets/bootstrap/_jumbotron.scss */
 .jumbotron p {
@@ -6649,7 +6649,7 @@ a.badge:hover, a.badge:focus {
 }
 /* line 24, /home/rmirmira/.rvm/gems/ruby-2.3.0/gems/bootstrap-sass-3.3.6/assets/stylesheets/bootstrap/_jumbotron.scss */
 .jumbotron > hr {
-  border-top-color: #676767;
+  border-top-color: #d5d5d5;
 }
 /* line 28, /home/rmirmira/.rvm/gems/ruby-2.3.0/gems/bootstrap-sass-3.3.6/assets/stylesheets/bootstrap/_jumbotron.scss */
 .container .jumbotron, .container-fluid .jumbotron {
@@ -8845,8 +8845,103 @@ button.close {
     display: none !important;
   }
 }
+/* CUSTOMIZE THE CAROUSEL
+-------------------------------------------------- */
+/* Carousel base class */
+/* line 6, /home/rmirmira/Desktop/rang/app/assets/stylesheets/carousel.css.scss */
+.carousel {
+  height: 500px;
+  margin-bottom: 60px;
+}
+
+/* Since positioning the image, we need to help out the caption */
+/* line 11, /home/rmirmira/Desktop/rang/app/assets/stylesheets/carousel.css.scss */
+.carousel-caption {
+  z-index: 10;
+}
+
+/* Declare heights because of positioning of img element */
+/* line 16, /home/rmirmira/Desktop/rang/app/assets/stylesheets/carousel.css.scss */
+.carousel .item {
+  height: 500px;
+  background-color: #777;
+}
+
+/* line 20, /home/rmirmira/Desktop/rang/app/assets/stylesheets/carousel.css.scss */
+.carousel-inner > .item > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  height: 500px;
+}
+
+/* MARKETING CONTENT
+-------------------------------------------------- */
+/* Center align the text within the three columns below the carousel */
+/* line 33, /home/rmirmira/Desktop/rang/app/assets/stylesheets/carousel.css.scss */
+.marketing .col-lg-4 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* line 37, /home/rmirmira/Desktop/rang/app/assets/stylesheets/carousel.css.scss */
+.marketing h2 {
+  font-weight: normal;
+}
+
+/* line 40, /home/rmirmira/Desktop/rang/app/assets/stylesheets/carousel.css.scss */
+.marketing .col-lg-4 p {
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+/* Featurettes
+------------------------- */
+/* line 49, /home/rmirmira/Desktop/rang/app/assets/stylesheets/carousel.css.scss */
+.featurette-divider {
+  margin: 80px 0;
+  /* Space out the Bootstrap <hr> more */
+}
+
+/* Thin out the marketing headings */
+/* line 54, /home/rmirmira/Desktop/rang/app/assets/stylesheets/carousel.css.scss */
+.featurette-heading {
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -1px;
+}
+
+/* RESPONSIVE CSS
+-------------------------------------------------- */
+@media (min-width: 768px) {
+  /* The navbar becomes detached from the top, so we round the corners */
+  /* line 68, /home/rmirmira/Desktop/rang/app/assets/stylesheets/carousel.css.scss */
+  .navbar-wrapper .navbar {
+    border-radius: 4px;
+  }
+
+  /* Bump up size of carousel content */
+  /* line 73, /home/rmirmira/Desktop/rang/app/assets/stylesheets/carousel.css.scss */
+  .carousel-caption p {
+    margin-bottom: 20px;
+    font-size: 21px;
+    line-height: 1.4;
+  }
+
+  /* line 79, /home/rmirmira/Desktop/rang/app/assets/stylesheets/carousel.css.scss */
+  .featurette-heading {
+    font-size: 50px;
+  }
+}
+@media (min-width: 992px) {
+  /* line 85, /home/rmirmira/Desktop/rang/app/assets/stylesheets/carousel.css.scss */
+  .featurette-heading {
+    margin-top: 120px;
+  }
+}
 /* line 4, /home/rmirmira/Desktop/rang/app/assets/stylesheets/photographers.scss */
-#pins {
+#photographerspin {
   padding: 5px;
   border-radius: 5px;
   margin: 0 auto;
