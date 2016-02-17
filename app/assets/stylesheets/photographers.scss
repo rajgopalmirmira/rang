@@ -2,8 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 #photographerspin {
-
-  padding: 5px;
+  padding-top: 180px;
   border-radius: 5px;
   margin: 0 auto;
 }
@@ -11,9 +10,15 @@
 .box {
   margin: 5px;
   width: 214px;
+  height: 214px;
 
 }
 
 .box img {
   width: 100%;
+}
+
+p {
+
+  padding-top: 180px;
 }

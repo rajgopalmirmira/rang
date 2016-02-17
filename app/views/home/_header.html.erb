@@ -1,31 +1,40 @@
 <div class="navbar-wrapper">
   <div class="container">
-      <h1>phorum <h5>moments to everlasting memories</h5></h1>
+
     <nav class="navbar navbar-inverse navbar-static-top">
       <div class="container">
-
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a><%= link_to 'phorum',root_path,class: "navbar-brand" %></a>
+          </div>
         <div id="navbar" class="navbar-collapse collapse">
-          <ul class="nav navbar-nav">
-            <li><%= link_to 'Home', root_path , class: "active "%></li>
-              <li class="dropdown">
-                <%= link_to 'Find Photograper <span class="caret"></span>'.html_safe, root_path,:class => "dropdown-toggle", :'data-toggle' => "dropdown", :role => "button", :'aria-haspopup' => "true", :'aria-expanded' =>"false" %>
-                <ul class="dropdown-menu">
-                <li><%= link_to 'Wedding' ,photographers_path %></li>
-                <li><%= link_to 'Portrait' ,photographers_path %></li>
-                <li><%= link_to 'Advertising' ,photographers_path %></li>
-                <li><%= link_to 'Fashion' ,photographers_path %></li>
-                <li><%= link_to 'Music' ,photographers_path %></li>
-                <li><%= link_to 'Commercial' ,photographers_path %></li>
-                </ul>
-              </li>
-            <li><%= link_to 'Get Matched', photographers_path %></li>
-            <li><%= link_to 'Get Inspired', photographers_path %></li>
-            <li><%= link_to 'Blog', photographers_path %></li>
-            <li><%= link_to 'Advertise', photographers_path %></li>
-            <li><%= link_to 'About us', home_about_path %></li>
-
-          </ul>
           <ul class="nav navbar-nav navbar-right">
+            <li class="dropdown">
+              <%= link_to 'Find Photograper <span class="caret"></span>'.html_safe, root_path,:class => "dropdown-toggle", :'data-toggle' => "dropdown", :role => "button", :'aria-haspopup' => "true", :'aria-expanded' =>"false" %>
+              <ul class="dropdown-menu">
+              <li><%= link_to 'Wedding' ,photographers_path %></li>
+              <li><%= link_to 'Portrait' ,photographers_path %></li>
+              <li><%= link_to 'Advertising' ,photographers_path %></li>
+              <li><%= link_to 'Fashion' ,photographers_path %></li>
+              <li><%= link_to 'Music' ,photographers_path %></li>
+              <li><%= link_to 'Commercial' ,photographers_path %></li>
+              </ul>
+            </li>
+          <li><%= link_to 'Get Inspired', photographers_path %></li>
+          <li><%= link_to 'Blog', photographers_path %></li>
+
+          <li class="dropdown">
+            <%= link_to 'About us <span class="caret"></span>'.html_safe, home_about_path,:class => "dropdown-toggle", :'data-toggle' => "dropdown", :role => "button", :'aria-haspopup' => "true", :'aria-expanded' =>"false" %>
+            <ul class="dropdown-menu">
+              <li><%= link_to 'Advertise', photographers_path %></li>
+              <li><%= link_to 'Contact', home_about_path %></li>
+            </ul>
+          </li>
             <li class="dropdown">
 
                 <% if user_signed_in? %>
