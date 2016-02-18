@@ -119,13 +119,19 @@ font-weight: 900;
   .navbar .navbar-brand:hover,
   .navbar .navbar-brand:focus { color: silver;}
   .navbar .navbar-nav > li > a {color: black;}
-  .navbar .navbar-nav > li > a:hover,
-  .navbar .navbar-nav > li > a:focus {color: silver; font-weight: 700}
+
   .navbar .navbar-nav > li > .dropdown-menu {background-color: transparent;}
   .navbar .navbar-nav > li > .dropdown-menu > li > a {color:black;}
   .navbar .navbar-nav > li > .dropdown-menu > li > a:hover,
   .navbar .navbar-nav > li > .dropdown-menu > li > a:focus
   {color: silver; font-weight: 700; background-color: transparent;}
+  .navbar .navbar-nav > li > a:hover,
+  .navbar .navbar-nav > li > a:focus,
+  .navbar .navbar-nav > li > a:active {color: silver !important; font-weight: 700; background-color: transparent;}
+  .navbar .navbar-nav > .open > a,
+  .navbar .navbar-nav > .open > a:focus,
+  .navbar .navbar-nav > .open > a:hover,
+  .navbar .navbar-nav > .open > a:active {color: silver !important; font-weight: 700; background-color: transparent;}
 
   .navbar .dropdown-menu {
     background-color: transparent;
@@ -149,9 +155,8 @@ font-weight: 900;
 }
 
 
-/*Background for page header class*/
-.page-header{
-  background: transparent;
-  margin: 0;
-  padding: 0;
-}
+.allpages{padding-top: 60px; background-color: gray;
+padding-right: 15px;
+padding-left: 15px;}
+
+body {background-color: gray;}
